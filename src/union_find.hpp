@@ -9,14 +9,17 @@
 class union_find {
 public:
     explicit union_find(int size);
+
     ~union_find();
 
     bool is_connected(int p, int q);
 
     void make_union(int p, int q);
 
+    int find_root(int p);
+
 private:
-    int* fields;
+    int *parent;
     int size;
 };
 
