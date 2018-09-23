@@ -26,10 +26,13 @@ public:
 
     void print();
 
+    int get_max_depth();
+
 private:
-    int *parent;
-    int *treeSize;
+    int *subtreeParent;
+    int *subtreeDepth;
     int size;
+    int maxDepth;
 };
 
 

@@ -14,9 +14,10 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 # Unit Tests
 ################################
 # Add test cpp file
-add_executable(runUnitTests test/main.cpp test/01_quick_union/union_find_test.cpp)
+add_executable(runUnitTests test/main.cpp test/01_quick_union/union_find_test.cpp src/01_quick_union/union_find.cpp src/01_quick_union/union_find.hpp)
 # Link test executable against gtest & gtest_main
 target_link_libraries(runUnitTests gtest gtest_main pthread)
+target_include_directories(runUnitTests PRIVATE src)
 add_test(runUnitTests runUnitTests)
 
 add_executable(algorithms1 src/01_quick_union/main.cpp src/01_quick_union/union_find.cpp src/01_quick_union/union_find.hpp)
