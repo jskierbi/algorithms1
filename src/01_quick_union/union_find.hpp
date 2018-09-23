@@ -5,6 +5,10 @@
 #ifndef CPP_PLAYGROUND_UNION_FIND_HPP
 #define CPP_PLAYGROUND_UNION_FIND_HPP
 
+namespace std {
+    template<class T, class P>
+    class pair;
+}
 
 class union_find {
 public:
@@ -18,8 +22,13 @@ public:
 
     int find_root(int p);
 
+    std::pair<int, int> find_roots_balanced(int p, int q);
+
+    void print();
+
 private:
     int *parent;
+    int *treeSize;
     int size;
 };
 
