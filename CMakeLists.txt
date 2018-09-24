@@ -20,4 +20,4 @@ target_link_libraries(runUnitTests gtest gtest_main pthread)
 target_include_directories(runUnitTests PRIVATE src)
 add_test(runUnitTests runUnitTests)
 
-add_executable(algorithms1 src/01_quick_union/main.cpp src/01_quick_union/union_find.cpp src/01_quick_union/union_find.hpp)
+add_executable(algorithms1 src/01_quick_union/main.cpp src/01_quick_union/union_find.cpp src/01_quick_union/union_find.hpp src/01_quick_union/percolator.cpp src/01_quick_union/percolator.hpp)

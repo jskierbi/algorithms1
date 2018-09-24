@@ -45,7 +45,9 @@ void union_find::make_union(int p, int q) {
 
 int union_find::find_root(int p) {
     assert(p >= 0 && p < size);
-    for (; p != subtreeParent[p]; p = subtreeParent[p]);
+    for (; p != subtreeParent[p]; p = subtreeParent[p]) {
+        subtreeParent[p] = subtreeParent[subtreeParent[p]]; // path compression
+    }
     return p;
 }
 
